@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "CommonJS",
+    "rootDir": "src",
+    "outDir": "dist",
+    "removeComments": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "moduleResolution": "Node",
+    "baseUrl": "src",
+    "paths": {},
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
