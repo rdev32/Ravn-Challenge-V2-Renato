@@ -127,8 +127,8 @@ export async function getOrder(req: Request, res: Response) {
         const orderOwner = await prisma.user.findUnique({ where: { id: req.params.id }})
         if (!orderOwner) return res.status(400).json({ message: 'User not found', data: {} })
 
-        const order = await prisma.order.findMany({ where: { userId: orderOwner.id }})
-        if (!orderOwner) return res.status(400).json({ message: 'Order not found', data: {} })
+        const order = await prisma.order.findMany({ where: { ownerId: orderOwner.id }})
+        if (!order) return res.status(400).json({ message: 'Order not found', data: {} })
 
         res.status(200).json({
             message: 'Order detail',
