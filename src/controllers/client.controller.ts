@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import { PrismaClient, Product } from '@prisma/client'
-import { generatePagination } from 'middlewares/pagination'
+import { generatePagination } from '../middlewares/pagination'
 
 const prisma = new PrismaClient()
 
