@@ -21,8 +21,8 @@ interface ProductPurchase {
 export async function getProducts(req: Request, res: Response) {
     try {
         const products: Product[] = await prisma.product.findMany()
-        const page: number = Number(req.query.page) || 1
-        const limit: number = Number(req.query.limit) || 5
+        const page = Number(req.query.page)
+        const limit = Number(req.query.limit)
 
         const results = generatePagination(products, page, limit, req)
         res.status(200).json(results)

@@ -4,12 +4,10 @@ interface Page {
     page: number
     next: {
         page: number
-        limit: number
         url: URL
     }
     prev: {
         page: number
-        limit: number
         url: URL
     }
     data: unknown
@@ -23,7 +21,6 @@ export function generatePagination(array: unknown[], page: number, limit: number
     if (endIndex < array.length) {
         results.next = {
             page: page + 1,
-            limit: limit,
             url: generateURL(req, page + 1, limit)
         }
     }
@@ -31,7 +28,6 @@ export function generatePagination(array: unknown[], page: number, limit: number
     if (startIndex > 0) {
         results.prev = {
             page: page - 1,
-            limit: limit,
             url: generateURL(req, page - 1, limit)
         }
     }
