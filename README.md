@@ -7,5 +7,7 @@ This is a project made for automating the billing process on a kiosk where snack
 4. Migration to the database can be done with the command `npx prisma migrate deploy`
 5. To get the models required for the application run `npx prisma generate`
 6. After doing the stepts above, run `npm run build`
-7. Create a `.env` file filling with the secret and port as in `.env.example`
+7. Create and fill your `.env` file as in `.env.example`
 8. You can now start the application with `npm start`
+## Documentation
+Get to know the list of routes by entering `http://localhost:5000/docs`
